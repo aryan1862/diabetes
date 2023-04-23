@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Boston House Price Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+        <input type="text" name="HighBP" placeholder="HighBP (0/1)" required="required" /><br>
+    	  <input type="text" name="HighChol" placeholder="HighChol (0/1)" required="required" /><br>
+        <input type="text" name="CholCheck" placeholder="CholCheck (0/1)" required="required" /><br>
+        <input type="text" name="BMI" placeholder="BMI" required="required" /><br>
+        <input type="text" name="Smoker" placeholder="Smoker (0/1)" required="required" /><br>
+        <input type="text" name="Stroke" placeholder="Stroke (0/1)" required="required" /><br>
+        <input type="text" name="HeartDiseaseorAttack" placeholder="HeartDiseaseorAttack (0/1)" required="required" /><br>
+        <input type="text" name="PhysActivity" placeholder="PhysActivity (0/1)" required="required" /><br>
+        <input type="text" name="Fruits" placeholder="Fruits (0/1)" required="required" /><br>
+        <input type="text" name="Veggies" placeholder="Veggies (0/1)" required="required" /><br>
+        <input type="text" name="HvyAlcoholConsump" placeholder="HvyAlcoholConsump (0/1)" required="required" /><br>
+        <input type="text" name="AnyHealthcare" placeholder="AnyHealthcare (0/1)" required="required" /><br>
+        <input type="text" name="NoDocbcCost" placeholder="NoDocbcCost (0/1)" required="required" /><br>
+        <input type="text" name="GenHlth" placeholder="GenHlth (1/2/3/4/5)" required="required" /><br>
+        <input type="text" name="MentHlth" placeholder="MentHlth" required="required" /><br>
+        <input type="text" name="PhysHlth" placeholder="PhysHlth" required="required" /><br>
+        <input type="text" name="DiffWalk" placeholder="DiffWalk (0/1)" required="required" /><br>
+        <input type="text" name="Sex" placeholder="Sex (0/1)" required="required" /><br>
+        <input type="text" name="Age" placeholder="Age" required="required" /><br>
+        <input type="text" name="Education" placeholder="Education" required="required" /><br>
+        <input type="text" name="Income" placeholder="Income" required="required" /><br>
+
+
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
